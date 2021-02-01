@@ -1,0 +1,352 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --newsbg: #0e3b5c;
+  --product_ad_bg: #01395e;
+  --font1: "Source Sans Pro", sans-serif;
+  --font2: "Tajawal", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.news {
+  background-color: var(--newsbg);
+  color: white;
+  text-align: center;
+  padding: 5px 0px;
+  font-family: var(--font2);
+}
+
+.hero_section {
+  position: relative;
+  /* opacity: 0.78; */
+  width: auto;
+  height: 95vh;
+  /* padding: 10px; */
+}
+.hero_section img {
+  background-position: center center/cover;
+  width: 100vw;
+  height: 95vh;
+}
+.hero_section .welcome {
+  position: absolute;
+  opacity: 1;
+  text-align: center;
+  top: 20px;
+  left: 25%;
+  right: 25%;
+  font-size: 2.5rem;
+  color: #004777;
+  font-family: var(--font1);
+  font-weight: bold;
+}
+
+.product_ad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--product_ad_bg);
+  min-height: 30vh;
+  color: white;
+  line-height: 40px;
+}
+
+.product_ad .sample_user h2 {
+  font-size: 2em;
+  padding: 5px 0px;
+  font-family: var(--font2);
+}
+
+.product_ad .sample_user h4 {
+  font-size: 1.4em;
+  color: rgb(202, 199, 199);
+  font-family: var(--font2);
+  /* margin-top: 5px; */
+}
+
+.coupon {
+    width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  min-height: 35vh;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.coupon_info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coupon_info p {
+  font-size: 1.5rem;
+  margin: 0px 10px;
+  color: rgb(156, 2, 2);
+  font-weight: bold;
+  font-family: var(--font2);
+}
+.apply_coupon {
+  border: 2px solid black;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.apply_coupon input[type="text"] {
+  outline: none;
+  border: none;
+  height: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 2px;
+  margin: 0px 5px;
+}
+.apply_coupon a {
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.coupon_discount {
+  position: relative;
+  background-color: rgb(255, 213, 210);
+  margin: 20px;
+  padding: 0px 10px;
+  font-family: var(--font1);
+}
+.coupon_discount p {
+  margin-top: -15px;
+  font-size: 1rem;
+  color: rgb(156, 2, 2);
+}
+.coupon_discount p b {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--product_ad_bg);
+  font-family: var(--font2);
+}
+
+.coupon b {
+  color: var(--product_ad_bg);
+ text-align: center;
+}
+
+#shopping_btn {
+  width: 200px;
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: var(--product_ad_bg);
+  padding: 10px 25px;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 12px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  transition: transform ease-in-out 0.2;
+}
+
+#shopping_btn:hover {
+  box-shadow: 2px 2px 6px rgb(255, 175, 188);
+  transform: scale(1.04);
+}
+
+.image-ads {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.image-ads img {
+  height: 250px;
+  width:25%;
+}
+
+/* ==media queries======= */
+
+@media screen and (max-width:1024px){
+    .hero_section .welcome {
+        top: 20px;
+        left: 0%;
+        right: 0%;
+
+      }
+      .hero_section .welcome {
+        position: absolute;
+        font-size: 2.2rem;
+        color: #004777;
+        font-family: var(--font1);
+      }
+      
+}
+@media screen and (max-width:768px){
+
+    .image-ads img {
+        height: 250px;
+        width: 50%;
+      }
+      
+      .hero_section .welcome {
+        position: absolute;
+        font-size: 2rem;
+        color: #004777;
+        font-family: var(--font1);
+      }
+
+
+}
+
+@media screen and (max-width:610px){
+    .hero_section .welcome{
+        top: 13%;
+        font-size: 1.8em;
+        height: 80vh;
+        color: #004777;
+        font-family: var(--font1);
+      }
+
+      .product_ad .sample_user h2 {
+        font-size: 1.6em;
+        padding: 5px 0px;
+        font-family: var(--font2);
+      }
+      
+      .product_ad .sample_user h4 {
+        font-size: 1.2em;
+        color: rgb(202, 199, 199);
+        font-family: var(--font2);
+        /* margin-top: 5px; */
+      }
+      .product_ad {
+        line-height: 35px;
+      }
+
+}
+@media screen and (max-width:425px){
+    .hero_section {
+        position: relative;
+        /* opacity: 0.78; */
+        width: auto;
+        /* padding: 10px; */
+      }
+    .hero_section .welcome{
+        font-size: 1.4em;
+        color: #004777;
+        font-family: var(--font1);
+      }
+
+      .product_ad .sample_user h2 {
+        font-size: 1.6em;
+        padding: 5px 0px;
+        font-family: var(--font2);
+      }
+      
+      .product_ad .sample_user h4 {
+        font-size: 1.2em;
+        color: rgb(202, 199, 199);
+        font-family: var(--font2);
+        /* margin-top: 5px; */
+      }
+      .product_ad {
+        line-height: 35px;
+      }
+
+}
+
+@media screen and (max-width:375px){
+
+    .hero_section .welcome{
+        top: 16%;
+        font-size: 1.4em;
+        color: #004777;
+        font-family: var(--font1);
+      }
+      .product_ad {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: var(--product_ad_bg);
+        min-height: 30vh;
+        color: white;
+        line-height: 30px;
+      }
+
+      .product_ad .sample_user h2 {
+        font-size: 1.4em;
+        padding: 5px 0px;
+        font-family: var(--font2);
+      }
+      
+      .product_ad .sample_user h4 {
+        font-size: 1em;
+        color: rgb(202, 199, 199);
+        font-family: var(--font2);
+        /* margin-top: 5px; */
+      }
+      .image-ads img {
+        height: 250px;
+        width: 100%;
+      }
+
+
+}
+@media screen and (max-width:320px){
+    /* .hero_section .welcome{
+      
+        font-size: 1.3rem;
+        color: #004777;
+        font-family: var(--font1);
+      } */
+      .product_ad {
+        line-height: 25px;
+      }
+
+      .product_ad .sample_user h2 {
+        font-size: 1.3em;
+
+      }
+      
+      .product_ad .sample_user h4 {
+        font-size: 14px;
+      }
+      .coupon_info p {
+        font-size: 1.2rem;
+        margin: 0px 10px;
+        color: rgb(156, 2, 2);
+        font-weight: bold;
+        font-family: var(--font2);
+    }
+
+      .coupon_discount p {
+        margin-top: -15px;
+        font-size: 14px;
+        color: rgb(156, 2, 2);
+      }
+      .coupon_discount p b {
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--product_ad_bg);
+        font-family: var(--font2);
+      }
+
+}
+
+
